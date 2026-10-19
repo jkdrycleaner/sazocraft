@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Craft | Reach out to us</title>
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #fdf8f3;
+      color: #2e241e;
+      line-height: 1.5;
+      transition: background 0.2s;
+    }
+
+    /* ===== HEADER / NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: #fff7ef;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      border-bottom: 1px solid #ede3d9;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #5e3e2b;
+    }
+
+    .logo span {
+      color: #c97b4b;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-weight: 500;
+      color: #4a3a2e;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.15s;
+      font-size: 1.05rem;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #c97b4b;
+      color: #9b5e36;
+    }
+
+    .admin-btn {
+      background: #c97b4b;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 5px 12px rgba(201, 123, 75, 0.3);
+      transition: 0.2s;
+      border: 1px solid #b46535;
+    }
+
+    .admin-btn:hover {
+      background: #b46535;
+      transform: scale(1.02);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 5% 2.5rem;
+      gap: 2.5rem;
+      background: linear-gradient(145deg, #fffaf5 0%, #fdf2e9 100%);
+    }
+
+    .hero-content {
+      flex: 1 1 300px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #3e2c1e;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #5e4b3b;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .cta-btn {
+      background: #5e3e2b;
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(94, 62, 43, 0.2);
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cta-btn:hover {
+      background: #3e2c1e;
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+      box-shadow: 0 30px 30px -15px rgba(94, 62, 43, 0.3);
+      border: 8px solid white;
+      transition: 0.3s;
+    }
+
+    /* ===== FEATURED PRODUCTS / SECTION ===== */
+    .section-title {
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+
+    .section-title h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3e2c1e;
+      display: inline-block;
+      border-bottom: 4px solid #c97b4b;
+      padding-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #6e5a4a;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 0 5% 3rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 15px 30px -10px rgba(94, 62, 43, 0.1);
+      transition: 0.2s ease;
+      border: 1px solid #f0e4da;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 35px -12px rgba(94, 62, 43, 0.2);
+    }
+
+    .product-icon {
+      font-size: 2.8rem;
+      color: #c97b4b;
+      margin-bottom: 1rem;
+      background: #fef4ec;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .product-card h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2e241e;
+    }
+
+    .product-card p {
+      color: #6a5645;
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .price-tag {
+      font-weight: 700;
+      color: #c97b4b;
+      font-size: 1.3rem;
+      background: #fef4ec;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    /* ===== CONTACT / REACH OUT ===== */
+    .contact-section {
+      background: #fff7ef;
+      padding: 3rem 5%;
+      border-radius: 60px 60px 0 0;
+      margin-top: 2rem;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+    }
+
+    .contact-info {
+      flex: 1 1 250px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #3e2c1e;
+    }
+
+    .contact-info p {
+      margin-bottom: 1.5rem;
+      color: #5e4b3b;
+      font-size: 1.1rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 1.2rem 0;
+      font-size: 1.05rem;
+      color: #3e2c1e;
+    }
+
+    .contact-detail i {
+      width: 40px;
+      height: 40px;
+      background: #f0e4da;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #c97b4b;
+    }
+
+    .contact-form {
+      flex: 1 1 300px;
+      background: white;
+      padding: 2rem;
+      border-radius: 32px;
+      box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: #3e2c1e;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.2rem;
+      border: 1.5px solid #e7d9ce;
+      border-radius: 50px;
+      font-size: 1rem;
+      background: #fefcf9;
+      outline: none;
+      transition: 0.15s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #c97b4b;
+      box-shadow: 0 0 0 3px rgba(201, 123, 75, 0.15);
+    }
+
+    .contact-form textarea {
+      border-radius: 25px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background: #c97b4b;
+      color: white;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .contact-form button:hover {
+      background: #b46535;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 2rem 5%;
+      color: #8b7767;
+      border-top: 1px solid #ede3d9;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    /* ===== ADMIN PANEL (MODAL) ===== */
+    .admin-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+    }
+
+    .admin-modal.active {
+      display: flex;
+    }
+
+    .admin-panel {
+      background: #fffcf9;
+      border-radius: 32px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 40px 50px -15px rgba(0, 0, 0, 0.4);
+      border: 1px solid #e7d9ce;
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .admin-header h2 {
+      font-size: 1.8rem;
+      color: #3e2c1e;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .close-admin {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #8b7767;
+      transition: 0.1s;
+      line-height: 1;
+    }
+
+    .close-admin:hover {
+      color: #c97b4b;
+    }
+
+    .admin-form label {
+      font-weight: 600;
+      color: #3e2c1e;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .admin-form input,
+    .admin-form textarea {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      margin-bottom: 1.5rem;
+      border: 1.5px solid #e7d9ce;
+      border-radius: 20px;
+      font-size: 1rem;
+      background: white;
+      outline: none;
+    }
+
+    .admin-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .admin-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-save {
+      background: #2e7d5e;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .btn-save:hover {
+      background: #1f5e45;
+    }
+
+    .btn-reset {
+      background: #e7d9ce;
+      color: #3e2c1e;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .btn-reset:hover {
+      background: #d6c4b6;
+    }
+
+    .admin-note {
+      background: #fef4ec;
+      padding: 1rem;
+      border-radius: 20px;
+      margin-top: 1.5rem;
+      color: #7a5e48;
+      font-size: 0.95rem;
+      border-left: 6px solid #c97b4b;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .admin-btn {
+        justify-content: center;
+      }
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1>Hand<span>Made</span> Craft</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="admin-btn" id="adminToggleBtn">
+      <i class="fas fa-pen"></i> Admin Panel
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Handcrafted with <br>love & passion</h2>
+      <p>Unique, sustainable, and made by hand. Reach out for custom orders or just say hello.</p>
+      <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-arrow-down"></i> Reach out
+      </button>
+    </div>
+    <div class="hero-image">
+      <!-- decorative SVG instead of external image (keeps it self-contained) -->
+      <svg width="350" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="border-radius: 50%; background: #f7e7da; padding: 10px;">
+        <circle cx="100" cy="100" r="85" fill="#fef4ec" stroke="#c97b4b" stroke-width="3" />
+        <path d="M70 80 Q 90 50, 130 70 Q 150 90, 140 120 Q 120 150, 80 140 Q 50 120, 70 80" fill="#c97b4b" opacity="0.6"/>
+        <circle cx="85" cy="95" r="8" fill="#5e3e2b" />
+        <circle cx="115" cy="95" r="8" fill="#5e3e2b" />
+        <path d="M90 130 Q 100 145, 110 130" stroke="#5e3e2b" stroke-width="6" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED CRAFTS ========== -->
+  <div class="section-title">
+    <h3>Our Handmade Collection</h3>
+    <p>Each piece tells a story</p>
+  </div>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-icon"><i class="fas fa-hand-sparkles"></i></div>
+      <h4>Clay Pottery</h4>
+      <p>Hand-thrown ceramics, glazed with earth-friendly minerals.</p>
+      <span class="price-tag">$34</span>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"><i class="fas fa-rug"></i></div>
+      <h4>Woven Rug</h4>
+      <p>Made from recycled cotton, soft and durable.</p>
+      <span class="price-tag">$89</span>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"><i class="fas fa-ring"></i></div>
+      <h4>Beaded Jewelry</h4>
+      <p>Hand-knotted with natural stones and glass beads.</p>
+      <span class="price-tag">$42</span>
+    </div>
+  </div>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Reach out to us</h3>
+        <p>We'd love to hear from you! Custom orders, questions, or just a friendly hello.</p>
+        <div class="contact-detail"><i class="fas fa-envelope"></i> hello@handmadecraft.com</div>
+        <div class="contact-detail"><i class="fas fa-phone-alt"></i> +1 (555) 234-9876</div>
+        <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> 123 Artisan Lane, Portland</div>
+      </div>
+      <div class="contact-form">
+        <h4>Send a message</h4>
+        <input type="text" placeholder="Your name" id="contactName">
+        <input type="email" placeholder="Email address" id="contactEmail">
+        <textarea placeholder="Tell us what you need..." id="contactMessage"></textarea>
+        <button id="sendMessageBtn"><i class="fas fa-paper-plane"></i> Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>© 2025 HandMade Craft — All things handmade with love.</p>
+  </footer>
+
+  <!-- ========== ADMIN PANEL MODAL ========== -->
+  <div class="admin-modal" id="adminModal">
+    <div class="admin-panel">
+      <div class="admin-header">
+        <h2><i class="fas fa-sliders-h"></i> Content Admin</h2>
+        <button class="close-admin" id="closeAdminBtn">&times;</button>
+      </div>
+      <div class="admin-form">
+        <label for="siteTitle">Website Title</label>
+        <input type="text" id="siteTitle" value="HandMade Craft">
+
+        <label for="heroHeading">Hero Heading</label>
+        <input type="text" id="heroHeading" value="Handcrafted with love & passion">
+
+        <label for="heroParagraph">Hero Paragraph</label>
+        <textarea id="heroParagraph">Unique, sustainable, and made by hand. Reach out for custom orders or just say hello.</textarea>
+
+        <label for="contactEmailAdmin">Contact Email</label>
+        <input type="email" id="contactEmailAdmin" value="hello@handmadecraft.com">
+
+        <label for="contactPhoneAdmin">Contact Phone</label>
+        <input type="text" id="contactPhoneAdmin" value="+1 (555) 234-9876">
+
+        <div class="admin-actions">
+          <button class="btn-save" id="saveAdminBtn"><i class="fas fa-save"></i> Save changes</button>
+          <button class="btn-reset" id="resetAdminBtn"><i class="fas fa-undo-alt"></i> Reset to default</button>
+        </div>
+        <div class="admin-note">
+          <i class="fas fa-info-circle"></i> Changes are saved in your browser (localStorage) and applied instantly to the page.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      // ----- DOM refs -----
+      const adminModal = document.getElementById('adminModal');
+      const adminToggleBtn = document.getElementById('adminToggleBtn');
+      const closeAdminBtn = document.getElementById('closeAdminBtn');
+      
+      const siteTitleInput = document.getElementById('siteTitle');
+      const heroHeadingInput = document.getElementById('heroHeading');
+      const heroParagraphInput = document.getElementById('heroParagraph');
+      const contactEmailInput = document.getElementById('contactEmailAdmin');
+      const contactPhoneInput = document.getElementById('contactPhoneAdmin');
+
+      const saveAdminBtn = document.getElementById('saveAdminBtn');
+      const resetAdminBtn = document.getElementById('resetAdminBtn');
+
+      // Page elements to update
+      const logoText = document.querySelector('.logo h1');
+      const heroHeading = document.querySelector('.hero-content h2');
+      const heroPara = document.querySelector('.hero-content p');
+      const contactEmailDisplay = document.querySelector('.contact-detail:nth-of-type(1)'); // we'll target carefully
+      const contactPhoneDisplay = document.querySelector('.contact-detail:nth-of-type(2)');
+
+      // Better: select via the contact info container
+      const contactInfoContainer = document.querySelector('.contact-info');
+      const contactDetails = contactInfoContainer.querySelectorAll('.contact-detail');
+
+      // ----- DEFAULT content (fallback) -----
+      const DEFAULTS = {
+        siteTitle: 'HandMade Craft',
+        heroHeading: 'Handcrafted with love & passion',
+        heroParagraph: 'Unique, sustainable, and made by hand. Reach out for custom orders or just say hello.',
+        contactEmail: 'hello@handmadecraft.com',
+        contactPhone: '+1 (555) 234-9876'
+      };
+
+      // ----- storage key -----
+      const STORAGE_KEY = 'handmade_craft_admin';
+
+      // ----- Load from localStorage and apply -----
+      function loadContent() {
+        let saved;
+        try {
+          saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        } catch (e) {
+          saved = null;
+        }
+
+        // If no saved data, use defaults
+        const data = saved || { ...DEFAULTS };
+
+        // Update page elements
+        // Logo (keep "Hand" and "Made Craft" style)
+        if (logoText) {
+          // we want to preserve the span for "Made"
+          logoText.innerHTML = data.siteTitle.replace(/(Hand)(Made)(.*)/, '$1<span>$2</span>$3') || data.siteTitle;
+          // fallback if replace fails; but if title is custom, just show it as is? 
+          // better: just set innerHTML safely. Use textContent? We want span.
+          // If custom title is e.g. "My Craft", no "HandMade" -> show whole title.
+          if (!data.siteTitle.includes('HandMade')) {
+            logoText.textContent = data.siteTitle;
+          } else {
+            // simple approach: replace first "HandMade" case-insensitive
+            const parts = data.siteTitle.split('HandMade');
+            if (parts.length === 2) {
+              logoText.innerHTML = parts[0] + '<span>HandMade</span>' + parts[1];
+            } else {
+              logoText.textContent = data.siteTitle;
+            }
+          }
+        }
+
+        // Hero heading and paragraph
+        if (heroHeading) heroHeading.textContent = data.heroHeading;
+        if (heroPara) heroPara.textContent = data.heroParagraph;
+
+        // Contact email & phone: we have two .contact-detail elements in .contact-info
+        // first one is email, second is phone (they contain <i> and text)
+        const details = contactInfoContainer.querySelectorAll('.contact-detail');
+        if (details.length >= 2) {
+          // email detail: first
+          details[0].innerHTML = `<i class="fas fa-envelope"></i> ${data.contactEmail}`;
+          // phone detail: second
+          details[1].innerHTML = `<i class="fas fa-phone-alt"></i> ${data.contactPhone}`;
+        }
+
+        // Also update admin input fields to reflect current saved values
+        siteTitleInput.value = data.siteTitle;
+        heroHeadingInput.value = data.heroHeading;
+        heroParagraphInput.value = data.heroParagraph;
+        contactEmailInput.value = data.contactEmail;
+        contactPhoneInput.value = data.contactPhone;
+      }
+
+      // ----- Save current admin inputs to localStorage + update page -----
+      function saveContent() {
+        const newData = {
+          siteTitle: siteTitleInput.value.trim() || DEFAULTS.siteTitle,
+          heroHeading: heroHeadingInput.value.trim() || DEFAULTS.heroHeading,
+          heroParagraph: heroParagraphInput.value.trim() || DEFAULTS.heroParagraph,
+          contactEmail: contactEmailInput.value.trim() || DEFAULTS.contactEmail,
+          contactPhone: contactPhoneInput.value.trim() || DEFAULTS.contactPhone
+        };
+
+        // Save to localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(newData));
+
+        // Update page instantly
+        // Logo update with HandMade span if possible
+        if (logoText) {
+          const title = newData.siteTitle;
+          if (title.toLowerCase().includes('handmade')) {
+            const regex = /(handmade)/i;
+            const match = title.match(regex);
+            if (match) {
+              const index = match.index;
+              const before = title.slice(0, index);
+              const after = title.slice(index + 'handmade'.length);
+              logoText.innerHTML = before + '<span>' + match[0] + '</span>' + after;
+            } else {
+              logoText.textContent = title;
+            }
+          } else {
+            logoText.textContent = title;
+          }
+        }
+        if (heroHeading) heroHeading.textContent = newData.heroHeading;
+        if (heroPara) heroPara.textContent = newData.heroParagraph;
+
+        const details = contactInfoContainer.querySelectorAll('.contact-detail');
+        if (details.length >= 2) {
+          details[0].innerHTML = `<i class="fas fa-envelope"></i> ${newData.contactEmail}`;
+          details[1].innerHTML = `<i class="fas fa-phone-alt"></i> ${newData.contactPhone}`;
+        }
+
+        // Also update input fields (in case trim happened)
+        siteTitleInput.value = newData.siteTitle;
+        heroHeadingInput.value = newData.heroHeading;
+        heroParagraphInput.value = newData.heroParagraph;
+        contactEmailInput.value = newData.contactEmail;
+        contactPhoneInput.value = newData.contactPhone;
+
+        // Close modal after save? optional: keep open. We'll keep open but show feedback.
+        // Small toast-like feedback: change button text temporarily
+        const originalText = saveAdminBtn.innerHTML;
+        saveAdminBtn.innerHTML = '<i class="fas fa-check"></i> Saved!';
+        setTimeout(() => { saveAdminBtn.innerHTML = originalText; }, 1500);
+      }
+
+      // ----- Reset to defaults (also update storage and page) -----
+      function resetToDefaults() {
+        // Set inputs to defaults
+        siteTitleInput.value = DEFAULTS.siteTitle;
+        heroHeadingInput.value = DEFAULTS.heroHeading;
+        heroParagraphInput.value = DEFAULTS.heroParagraph;
+        contactEmailInput.value = DEFAULTS.contactEmail;
+        contactPhoneInput.value = DEFAULTS.contactPhone;
+
+        // save it (this will also update page and storage)
+        saveContent();
+      }
+
+      // ----- Modal open/close -----
+      function openAdmin() {
+        // Before opening, load current saved data into inputs (in case localStorage changed)
+        loadContent(); 
+        adminModal.classList.add('active');
+      }
+
+      function closeAdmin() {
+        adminModal.classList.remove('active');
+      }
+
+      // ----- Event listeners -----
+      adminToggleBtn.addEventListener('click', openAdmin);
+      closeAdminBtn.addEventListener('click', closeAdmin);
+      // click outside to close
+      adminModal.addEventListener('click', (e) => {
+        if (e.target === adminModal) closeAdmin();
+      });
+
+      saveAdminBtn.addEventListener('click', saveContent);
+      resetAdminBtn.addEventListener('click', resetToDefaults);
+
+      // ----- Contact form demo (just alert) -----
+      const sendMessageBtn = document.getElementById('sendMessageBtn');
+      if (sendMessageBtn) {
+        sendMessageBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contactName')?.value.trim();
+          const email = document.getElementById('contactEmail')?.value.trim();
+          const msg = document.getElementById('contactMessage')?.value.trim();
+          if (!name || !email || !msg) {
+            alert('Please fill in all fields before sending.');
+          } else {
+            alert(`Thanks ${name}! Your message has been received (demo). We'll reach out at ${email}.`);
+            document.getElementById('contactName').value = '';
+            document.getElementById('contactEmail').value = '';
+            document.getElementById('contactMessage').value = '';
+          }
+        });
+      }
+
+      // ----- On page load, apply any saved content -----
+      loadContent();
+
+      // Also if localStorage is empty, defaults are already set
+      // Optional: ensure the logo has a span even on first load
+      // (loadContent already applies fallback with span)
+    })();
+  </script>
+</body>
+</html>
